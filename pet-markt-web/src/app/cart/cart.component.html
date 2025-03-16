@@ -1,0 +1,61 @@
+<div class="space-y-8">
+  <h1 class="text-3xl font-bold">Shopping Cart</h1>
+
+  <!-- when there are no cart items -->
+  <div class="text-center py-8">
+    <p>Your cart is empty</p>
+    <a routerLink="/products" class="btn btn-primary mt-4">Continue Shopping</a>
+  </div>
+
+  <!-- cart view -->
+
+  <div class="overflow-x-auto">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- for each item -->
+        <!-- <tr>
+          <td>
+            <div class="flex items-center space-x-3">
+              <div class="avatar">
+                <div class="mask mask-squircle w-12 h-12">
+                  <img [src]="item.image" [alt]="item.name" />
+                </div>
+              </div>
+              <div>{{ item.name }}</div>
+            </div>
+          </td>
+          <td>${{ item.price | number : "1.2-2" }}</td>
+          <td>
+            <input type="number" class="input input-bordered w-20" min="1" />
+          </td>
+          <td>${{ item.price * item.quantity | number : "1.2-2" }}</td>
+          <td>
+            <button class="btn btn-ghost btn-sm">Remove</button>
+          </td>
+        </tr> -->
+      </tbody>
+    </table>
+  </div>
+
+  <div class="flex justify-between items-center">
+    <div>
+      <!-- cart total -->
+      <!-- <p class="text-xl">Total: ${{ cart.totalAmount() | number : "1.2-2" }}</p> -->
+    </div>
+    <div class="space-x-4">
+      <button class="btn">Clear Cart</button>
+      <a routerLink="/checkout" class="btn btn-primary">Proceed to Checkout</a>
+    </div>
+  </div>
+
+  <!-- end cart view -->
+</div>
