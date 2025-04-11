@@ -1,6 +1,5 @@
 <div class="max-w-2xl mx-auto py-8 space-y-8">
-  @let order = orderStore.orderDetail(); 
-  @if (orderStore.error()) {
+  @let order = orderStore.orderDetail(); @if (orderStore.error()) {
   <div class="alert alert-error">
     {{ orderStore.error() }}
   </div>
@@ -12,7 +11,7 @@
 
       <div class="space-y-4">
         @defer (on immediate; hydrate never) {
-        <app-order-details [order]="orderStore.orderDetail()" />
+        <app-order-detail [order]="orderStore.orderDetail()" />
         }
       </div>
     </div>
